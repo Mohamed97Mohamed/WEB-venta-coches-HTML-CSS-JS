@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Contacto</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<link rel="stylesheet" type="text/css" href="stilo.css"/>
+	<link rel="stylesheet" type="text/css" href="style-contacto.css"/>
+	<script src="funcion.js"> </script>
+  </head>
+  <body>
+  
+	
+	<header>
+	
+		<div class="container logo-nav-container">
+		
+			<div class="photo">
+				<picture>
+				  <source media="(min-width: 1050px)" srcset="Imagenes/Logo-Tienda-3.png"/>
+				  <source media="(min-width: 768px)" srcset="Imagenes/Logo-Tienda.jpg"/>
+				  <img src="Imagenes/Logo-Tienda-2.png" alt="Logo" style="width:auto;"/>
+				</picture>
+			</div>
+			<nav class="nav">
+				<ul>
+					<li><a href="productos.html">Productos</a></li>
+					<li><a href="ultimas-noticias.html">Ultimas Noticias</a></li>
+					<li><a href="contacto.html">Contacto</a></li>
+					<li><a href="inventada.html">Personalizar Coche</a></li>
+		
+				</ul>
+	
+			</nav>
+			
+			<!-- Menu para dispositivos moviles -->
+			<nav class="subnav">
+				<button class="subnavbtn">Ver Menu <i class="fa fa-caret-down"></i></button>
+				<div class="subnav-content">
+					<ul>
+						<li><a href="productos.html">Productos</a></li>
+						<li><a href="ultimas-noticias.html">Ultimas Noticias</a></li>
+						<li><a href="contacto.html">Contacto</a></li>
+						<li><a href="inventada.html">Personalizar Coche</a></li>
+					</ul>
+				</div>
+			</nav>
+
+		
+		</div>
+		
+		
+	</header>
+	
+	
+	
+	
+	
+	<main>
+	
+
+		<aside>
+	
+			<img class="anuncioDer" src="Anuncios/anuncio-1.jpg" alt="anuncio"/>
+	
+		</aside>
+
+
+		
+		
+		<aside>
+	
+			<img class="anuncioDer" src="Anuncios/anuncio-4.jpg" alt="anuncio"/>
+	
+		</aside>
+
+		
+		<aside>
+	
+			<img class="anuncioDer" src="Anuncios/anuncio-5.jpg" alt="anuncio"/>
+	
+		</aside>
+		
+		<aside>
+	
+			<img class="anuncioDer" src="Anuncios/anuncio-4.jpg" alt="anuncio"/>
+	
+		</aside>
+		
+		<div class="container contacto">
+		
+			<div class="form-style-5">
+				<form action="mailto:mquesada@umh.es" method="post" enctype="text/plain" onload="validacion()" onsubmit="return validacion2()">
+					<fieldset>
+						<legend><span class="number">1</span> Informacion del usuario</legend>
+						Nombre: <span class="required">*</span><br>
+						<input type="text" name="nombre" id="field1" required>
+						DNI: <span class="required">*</span>
+						<input type="text" name="dni" id="dni" placeholder="00011122[A-Z]" required>
+						<div id="DNIIncorrecto"></div>
+						Email: <span class="required">*</span><br>
+						<input type="email" name="email" id="field3" required>
+						Fecha Nacimiento: <br>
+						<input type="date" name="user_date" id="user_date"/>
+						<div id="edadIncorrecta"></div>
+						Feléfono: <br>
+						<input type="tel" name="telefono" id="field5" pattern="\([0-9]{3}\) [0-9]{3}[ -][0-9]{4}" 
+						title="A valid telephone number consist of a 3 digits code area between brackets, a space, the three first digits of the number, a space or hypen (-), and four more digits"/>
+						<br><br>
+						Provincia: <span class="required">*</span> <br>
+						<input type="text" name="provincia" id="field6" required>
+						Nivel de satisfación: <span class="required">*</span> <br>
+						<input type="range" name="points"  min="1" max="5" >
+						<br><br>
+						URL personal: <br>
+						<input type="url" name="website" placeholder="https://miurl.es" pattern="https?://.+" title="Include http://">
+						Categoria: <br>
+						<select id="nombre_categoria" name="field6">
+							<optgroup label="Elige">
+								<option value="SUV">SUV</option>
+								<option value="Pickups">Pickups</option>
+								<option value="Deportivos">Deportivos</option>
+							</optgroup>
+						</select>
+						Producto:<span class="required">*</span><br>
+						<select id="nombre_producto" name="field7" required>
+							<option value="">Ninguno</option>
+							<option value="Tesla Model X">Tesla Model X</option>
+							<option value="Bugatti Chiron">Bugatti Chiron</option>
+							<option value="Toyota Hilux">Toyota Hilux</option>
+							
+						</select>
+						Mensaje: <br>
+						<textarea name="incidencia" rows="3" cols="40" id="descripcion_asunto">Asunto y texto del mensaje...</textarea>
+							
+					</fieldset>
+					<fieldset>
+						<legend><span class="number">2</span> Información Adicional</legend>
+						Recibir informacion de interes?:<span class="required">*</span><br/>
+						<input type="radio" name="comunicacion" value="Si" required> Si
+						<input type="radio" name="comunicacion" value="No" required> No
+						<br/>
+						Categorias:<br/>
+						<input type="checkbox" name="categoria" id="Deportivos"/> Deportivos
+						<input type="checkbox" name="categoria" id="Pick-Ups"/> Pick-Ups
+						<input type="checkbox" name="categoria" id="SUVs"/> SUVs
+					</fieldset>
+					
+					<fieldset>
+						<legend><span class="number">3</span> Último paso</legend>
+						<input type="reset" value="Resetear" />
+						<input type="submit" value="Enviar" onclick="">
+						
+						
+					</fieldset>
+				
+				
+				</form>
+			</div>
+		
+		</div>
+
+		
+
+
+	</main>
+	
+	
+
+	<footer>
+
+		<ul>
+			<li><a href="">Sobre Coches.com</a></li>
+			<li><a href="">Empleo</a></li>
+			<li><a href="">Localización de tiendas</a></li>
+			<li><a href="">Privacidad y legalidad</a></li>
+
+		</ul>
+		
+		<p> &copy; 2019 coches.com. All Rights Reserved.</p>
+		<p>
+			<a href="http://validator.w3.org/check?uri=referer"><img
+			  src="http://www.w3.org/Icons/valid-xhtml11" alt="Valid XHTML 1.1" height="31" width="88" /></a>
+			  
+			<a href="http://jigsaw.w3.org/css-validator/check/referer">
+				<img style="border:0;width:88px;height:31px"
+					src="http://jigsaw.w3.org/css-validator/images/vcss"
+					alt="¡CSS Válido!" />
+			</a>	
+		</p>
+		
+	
+	</footer>
+	
+	
+	
+	
+	
+	
+	
+	
+  </body>
+</html>
